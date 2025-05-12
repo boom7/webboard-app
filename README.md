@@ -1,63 +1,67 @@
-Webboard App
+# Webboard App
 
-A full-stack webboard application built with Next.js (Frontend) and NestJS (Backend). 
+A full-stack webboard application built with **Next.js** (Frontend) and **NestJS** (Backend).  
 Users can post and comment using a lightweight authentication system.
 
 ---
 
-Features:
+## Features
 
-- Default login with just a username (password optional)
+- Login with username (password optional)
 - Create posts and add comments
-- Backend with MongoDB / unit tests
+- Backend powered by MongoDB
+- Includes unit tests
 
 ---
 
-Tech Stack:
+## Setup Instructions
 
-- Frontend: Next.js
-- Backend: NestJS
+### Frontend (Next.js)
 
----
-
-Setup Instructions:
-
-Frontend Setup (Next.js):
-
+```bash
 cd client
 npm install
 npm run dev
+```
 
-- Runs at http://localhost:3000
+Runs at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-Backend Setup (NestJS):
+### Backend (NestJS)
 
+```bash
 cd server
 npm install
 npm run start:dev
+```
 
-- Runs at http://localhost:4000
+Runs at: [http://localhost:4000](http://localhost:4000)
 
 To run tests:
 
+```bash
 npm run test
+```
 
 ---
 
-Authentication Notes:
+## Authentication
 
-- By default, users can log in with just a username.
-- Optionally, the app also supports login with both username and password.
+- Users can log in with just a username by default.
+- Optionally supports login with both username and password.
 
 ---
 
-Environment Variables:
+## Environment Variables
 
-Backend (.env):
+### Backend (`.env`)
+```
 PORT=4000
 MONGODB_URI=mongodb://localhost:27017/webboard
+```
 
-Frontend (.env.local):
+### Frontend (`.env.local`)
+```
 NEXT_PUBLIC_API_URL=http://localhost:4000
+```
